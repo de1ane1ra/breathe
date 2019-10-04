@@ -1,0 +1,35 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="A reminder">
+<meta name="author" content="Avanier">
+<title>Breathe</title>
+<link rel="icon" href="data:;base64,">
+<style>
+  @keyframes grow {
+    0%, 100% {transform: scale(1)}
+    41.5%, 49.8% {transform: scale(1.272)}
+  }
+  * {margin: 0; padding: 0}
+  body, html {height: 100%}
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #030303;
+  }
+  div {
+    display: table-cell;
+    vertical-align: middle;
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    background-color: #e4e4e4;
+    animation-name: grow;
+    animation-duration: 11s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction:alternate
+  }
+</style>
+<div></div>
