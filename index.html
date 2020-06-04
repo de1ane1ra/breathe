@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
         <title>breathe</title>
         <style>
-            :root {--clr__bg: #FFFFFF;--clr__fg: #000000}
+            :root { --clr__bg: #FFFFFF; --clr__fg: #000000 }
+            
             @keyframes breathe {
-                0%,100%{transform: scale(1)}
-                40%,50%{transform: scale(1.618)}
+                0%, 100% { transform: scale(1) }
+                40%, 50% { transform: scale(1.618) }
             }
-            *{margin:0;padding:0;box-sizing:border-box;}
-            html{height:100%}
-            body{height:100%;display:flex;align-items:center;justify-content:center;background-color:var(--clr__bg);color:var(--clr__white);overflow:hidden;transition:color 5s ease,background-color 5s ease-in-out;font-family:monospace;}
-            main{height:350px;width:350px;border-radius:100%;border:1px solid var(--clr__fg);animation-name:breathe;animation-duration:11s;animation-iteration-count:infinite;animation-timing-function:ease-in-out;animation-direction:alternate;transition: width 1s ease,height 1s ease}
-            aside{position:absolute;left:2rem;bottom:2rem}
-            input{visibility:hidden}
-            label{color:var(--clr__fg);user-select:none;cursor:pointer;font-size:2rem;display:block;transition:transform 0.3s ease-in-out;}
-            label:hover{}
+            
+            * { margin:0; padding:0; box-sizing:border-box; }
+            html { height:100% }
+            body { height:100%; display:flex; align-items:center; justify-content:center; background-color: var(--clr__bg); color: var(--clr__white); overflow:hidden; transition: color 5s ease-in-out, background-color 5s ease-in-out; font-family: monospace;}
+            main { height: 350px; width: 350px; border-radius: 100%; border: 1px solid var(--clr__fg); animation-name: breathe; animation-duration: 11s; animation-iteration-count: infinite; animation-timing-function: ease-in-out; animation-direction: alternate; transition: width 1s ease, height 1s ease }
+            aside { position: absolute; left: 2rem; bottom: 2rem }
+            input { visibility: hidden }
+            label { color: var(--clr__fg); user-select: none; cursor: pointer; font-size: 2rem; display: block; transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out }
+            label:hover { opacity: 0.5; }
+            
             @media screen and (max-width: 600px) {
-                main{height:200px;width:200px;}
+                main { height: 200px; width: 200px }
             }
         </style>
     </head>
